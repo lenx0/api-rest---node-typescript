@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-require('dotenv').config(); //duvida
+require('dotenv').config();
 
 const connectString = process.env.MONGO_URI as string;
 

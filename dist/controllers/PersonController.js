@@ -88,7 +88,7 @@ var PersonController = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, PersonSchema_1.default.findById(req.body)];
+                        return [4 /*yield*/, PersonSchema_1.default.findById(req.params.id)];
                     case 1:
                         person = _a.sent();
                         return [2 /*return*/, res.send({ person: person })];

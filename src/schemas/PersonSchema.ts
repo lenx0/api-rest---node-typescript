@@ -1,38 +1,40 @@
+import { isValidObjectId } from "mongoose";
 import mongoose from "../database";
 
 const personSchema = new mongoose.Schema(
     {
-        id: {
-            type: Number,
+
+        name: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+        lastname: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+        age: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+        job: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+
+        cpf: {
+            type: String,
             required: true,
             unique: true,
         },
-
-        nome: {
-            type: String,
-            required: true,
-            unique: false,
-        },
-        sobrenome: {
-            type: String,
-            required: true,
-            unique: false,
-        },
-        idade: {
-            type: String,
-            required: true,
-            unique: false,
-        },
-        profissao: {
-            type: String,
-            required: true,
-            unique: false,
-        }
 
     }
 
 );
 
-const PersonSchema = mongoose.model("colclientes", personSchema);
+const PersonSchema = mongoose.model("colperson", personSchema);
 
 export default PersonSchema;

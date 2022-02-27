@@ -7,3 +7,4 @@ var fs = require('fs');
 var http = require('http');
 var httpServer = http.createServer(app_1.app);
 httpServer.listen(host_port);
+console.log("listen port " + host_port);

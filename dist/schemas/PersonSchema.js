@@ -10,7 +10,7 @@ var personSchema = new database_1.default.Schema({
         required: true,
         unique: false,
     },
-    lastName: {
+    lastname: {
         type: String,
         required: true,
         unique: false,
@@ -24,7 +24,12 @@ var personSchema = new database_1.default.Schema({
         type: String,
         required: true,
         unique: false,
-    }
+    },
+    cpf: {
+        type: String,
+        required: true,
+        unique: true,
+    },
 });
-var PersonSchema = database_1.default.model("Person", personSchema);
+var PersonSchema = database_1.default.model("colperson", personSchema);
 exports.default = PersonSchema;
